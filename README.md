@@ -1,6 +1,7 @@
 # heart-attack-prediction
 A simple machine learning model to predict heart attack risk using UCI Heart Disease dataset.
 
+**Summary:**
 I built a heart attack prediction model using the UCI Heart Disease dataset (900 samples, "num" as the target variable) and started with Logistic Regression due to the dataset’s size and binary classification nature. After testing Random Forest and noticing low accuracy (65%) and a negative cholesterol coefficient, I tried a version without cholesterol, but it made little difference. In the final version, I expanded features (ca, oldpeak, slope, thal), optimized C for regularization, and analyzed feature importance using correlation heatmaps, leading to a more accurate (75%) and interpretable model.
 
 **Building a Heart Attack Prediction Model: An Iterative Approach**
