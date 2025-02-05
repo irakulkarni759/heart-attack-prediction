@@ -2,6 +2,7 @@
 A simple machine learning model to predict heart attack risk using UCI Heart Disease dataset.
 
 **Building a Heart Attack Prediction Model: An Iterative Approach**
+
 When I first started working with the UCI Heart Disease dataset, I had around 900 data samples with "num" as the target variable, indicating the presence or absence of heart disease. Given the dataset's size and the binary nature of the classification problem, I decided to use Logistic Regression as my initial model. To validate its performance, I split the data into training and testing sets (80-20 split) using train_test_split from sklearn.model_selection.
 
 I preprocessed the dataset by:
@@ -15,9 +16,11 @@ After training the Logistic Regression model (LogisticRegression from sklearn.li
 To improve the model, I tried Random Forest (RandomForestClassifier from sklearn.ensemble), assuming a non-linear model might better capture interactions. I tuned n_estimators (number of trees), max_depth, and min_samples_split to reduce overfitting, but Random Forest didn’t significantly improve accuracy. Additionally, I noticed that cholesterol had a negative coefficient, which was counterintuitive.
 
 **Version 2: Removing Cholesterol**
+
 To test whether cholesterol was misleading the model, I created a second version excluding "chol" as a feature and retrained the model. However, the overall accuracy remained roughly the same, indicating that cholesterol wasn’t the main issue. I also adjusted the decision threshold (from 0.5 to 0.4) using predict_proba, trying to reduce false negatives. While this had some impact, the improvements were minimal.
 
 **Final Version: Adding More Features & Hyperparameter Tuning**
+
 I realized that the original feature set was too limited. For the final version, I expanded the feature set to include categorical and additional clinical variables, such as:
 
 ca (number of major coronary vessels, from fluoroscopy)
