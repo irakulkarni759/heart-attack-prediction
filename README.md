@@ -34,11 +34,16 @@ To prevent overfitting, I performed hyperparameter tuning on the Logistic Regres
 
 I also analyzed feature importance using model coefficients (coef_ from Logistic Regression) and created a correlation heatmap (heatmap from seaborn) to visualize feature relationships, ensuring that multicollinearity wasn’t skewing the results.
 
-Final Skills & Tools Used
+**Final Skills & Tools Used**
+
 Python Libraries: pandas, numpy, scipy.stats, sklearn (scikit-learn), seaborn, matplotlib
+
 Machine Learning Models: LogisticRegression, RandomForestClassifier
+
 Feature Engineering: Data imputation (fillna), categorical encoding (map), normalization (zscore)
+
 Model Evaluation: accuracy_score, confusion_matrix, predict_proba, correlation heatmap
+
 Hyperparameter Tuning: Optimizing C for Logistic Regression using np.logspace
-This iterative process helped me transform a basic model into a more reliable predictor while deepening my understanding of feature selection, model evaluation, and hyperparameter tuning.Building a Heart Attack Prediction Model: An Iterative Approach**
-When I first started working with the UCI Heart Disease dataset, I had around 900 data samples with "num" as the target variable, indicating the presence or absence of heart disease. Given the dataset's size and the binary nature of the classification problem, I decided to use Logistic Regression as my initial model. To validate its performance, I split the data into training and testing sets (80-20 split) using train_test_split from sklearn.model_selection.
+
+This iterative process helped me transform a basic model into a more reliable predictor (75% accuracy) while deepening my understanding of feature selection, model evaluation, and hyperparameter tuning.
